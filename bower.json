@@ -1,0 +1,33 @@
+{
+  "name": "baasic-angular-value-set",
+  "version": "0.1.21",
+  "description": "Baasic AngularJS SDK value set modules and services.",
+  "keywords": [
+    "angularjs",
+    "baasic",
+	"value set",
+    "backend"
+  ],
+  "license": "MIT",
+  "main": "dist/baasic-angular-value-set.js",
+  "ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests",
+        "src",
+        "spec",
+		"NuGet",
+		"lib",
+        "bower.json",
+        "gulpfile.js",
+        "package.json",
+        "README.md"
+    ],
+  "devDependencies": {
+  },
+  "dependencies": {
+	"baasic-angular-core": "baasic/baasic-sdk-angularjs-core"
+  }
+}
