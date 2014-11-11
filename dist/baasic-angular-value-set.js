@@ -52,7 +52,7 @@
                         return baasicApiHttp.get(valueSetRouteService.items.get.expand(baasicApiService.getParams(id, params)));
                     },
                     create: function (data) {
-                        return baasicApiHttp.post(valueSetRouteService.items.create.expand(), baasicApiService.createParams(data)[baasicConstants.modelPropertyName]);
+                        return baasicApiHttp.post(valueSetRouteService.items.create.expand(data), baasicApiService.createParams(data)[baasicConstants.modelPropertyName]);
                     },
                     update: function (data) {
                         var params = baasicApiService.updateParams(data);
