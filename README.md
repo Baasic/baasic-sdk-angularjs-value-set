@@ -84,6 +84,8 @@ var uri = params["model"].links('delete').href;
 
 Baasic Value-Set Route Service provides Baasic route templates which can then be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `valueSetRouteService` to obtain a part of needed routes while the other part is obtained through HAL. `valueSetRouteService` by convention uses the same function names as `valueSetService`.
 
+Here is a list of all the `valueSetRouteService` functions:
+
 * `get`, `find`, `create`
 * `item.*` - `get`, `find`, `create`
 * `parse` - Provides direct access to the `uriTemplateService`
