@@ -40,18 +40,18 @@ Baasic AngularJS Value-Set services and their functions can be found bellow. For
 
 Baasic Value-Set Service provides an easy way to consume Baasic Value-Set REST routes.
 
-* `get` - Gets a single Value-Set set by Id
-* `find` - Finds Value-Set sets by given criteria
-* `create` - Creates a new Value-Set set
-* `update` - Updates a Value-Set set
-* `remove` - Deletes a Value-Set set
+* `get` - Gets a single value-set set by Id
+* `find` - Finds value-set sets by given criteria
+* `create` - Creates a new value-set set
+* `update` - Updates a value-set set
+* `remove` - Deletes a value-set set
 * `routeService` - Provides direct access to `valueSetRouteService`
-* `item.*` - Contains Value-Set item functions:
- * `get` - Gets a single Value-Set item by Id
- * `find` - Finds Value-Set items by given criteria
- * `create` - Creates a new Value-Set item
- * `update` - Updates a Value-Set item
- * `remove` - Deletes a Value-Set item
+* `item.*` - Contains value-set item functions:
+ * `get` - Gets a single value-set item by Id
+ * `find` - Finds value-set items by given criteria
+ * `create` - Creates a new value-set item
+ * `update` - Updates a value-set item
+ * `remove` - Deletes a value-set item
 
 Here are a few examples on how to use the `valueSetService`:
 
@@ -82,20 +82,11 @@ var uri = params["model"].links('delete').href;
 
 ##### valueSetRouteService
 
-Baasic Value-Set Route Service provides Baasic route templates which can then be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `valueSetRouteService` to obtain all the needed URI's.
+Baasic Value-Set Route Service provides Baasic route templates which can then be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `valueSetRouteService` to obtain a part of needed routes while the other part is obtained through HAL. `valueSetRouteService` by convention uses the same function names as `valueSetService`.
 
-* `get` - "Get" Value-Set set URI
-* `find` - "Find" Value-Set set URI
-* `create` - "Create" Value-Set set URI
-* `update` - "Update" Value-Set set URI (obtained through HAL)
-* `remove` - "Delete" Value-Set set URI (obtained through HAL)
+* `get`, `find`, `create`
+* `item.*` - `get`, `find`, `create`
 * `parse` - Provides direct access to the `uriTemplateService`
-* `item.*` - Contains Value-Set item route templates:
- * `get` - "Get" Value-Set item URI
- * `find` - "Find" Value-Set item URI
- * `create` - "Create" Value-Set item URI
- * `update` - "Update" Value-Set item URI (obtained through HAL)
- * `remove` - "Delete" Value-Set item URI (obtained through HAL)
 
 URI templates can be expanded manually like this:
 
