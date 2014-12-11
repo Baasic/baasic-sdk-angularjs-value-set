@@ -94,7 +94,7 @@ URI templates can be expanded manually like this:
 
 ```javascript
 var params = { searchQuery: "myQuery", page: 4, rpp: 3 };
-valueSetRouteService.find.expand(params); // this will yield "/value-sets/?searchQuery=myQuery&page=4&rpp=3"
+baasicValueSetRouteService.find.expand(params); // this will yield "/value-sets/?searchQuery=myQuery&page=4&rpp=3"
 ```
 
 ## Build Process
