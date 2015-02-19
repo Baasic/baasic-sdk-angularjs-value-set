@@ -25,13 +25,13 @@
                 **/ 			
                 find: uriTemplateService.parse("value-sets/{?searchQuery,page,rpp,sort,embed,fields}"),
                 /**
-                * Parses get value set route which must be expanded with the name of the previously created resource in the system.
+                * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
                 * @method        
                 * @example baasicKeyValueRouteService.get.expand({setName: "setName"});               
                 **/   				
                 get: uriTemplateService.parse("value-sets/{setName}/{?embed,fields}"),
                 /**
-                * Parses create value set route, this URI template does not expose any additional options.
+                * Parses create value set route; this URI template does not expose any additional options.
                 * @method        
                 * @example baasicKeyValueRouteService.create.expand({});              
                 **/  				
@@ -64,7 +64,7 @@
 					**/					
                     get: uriTemplateService.parse("value-sets/{setName}/items/{id}/{?embed,fields}"),
 					/**
-					* Parses create value set item route, the URI template should be expanded with the value set name.
+					* Parses create value set item route; the URI template should be expanded with the value set name.
 					* @method        
 					* @example baasicKeyValueRouteService.create.expand({});              
 					**/  					
