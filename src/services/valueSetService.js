@@ -1,9 +1,6 @@
 ﻿/**
  * @module baasicValueSetService
-**/
-
-/** 
- * @overview Value set service.
+ * @description Baasic Value-Set Service provides an easy way to consume Baasic Value-Set REST routes.
  * @copyright (c) 2015 Mono-Software
  * @license MIT
  * @author Mono-Software

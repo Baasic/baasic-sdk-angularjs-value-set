@@ -1,9 +1,6 @@
 ﻿/**
  * @module baasicValueSetRouteService
-**/
-
-/** 
- * @overview Value set route service.
+ * @description Baasic Value-Set Route Service provides Baasic route templates which can then be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `baasicValueSetRouteService` to obtain a part of needed routes while the other part is obtained through HAL. Route services by convention use the same function names as their corresponding services. 
  * @copyright (c) 2015 Mono-Software
  * @license MIT
  * @author Mono-Software
