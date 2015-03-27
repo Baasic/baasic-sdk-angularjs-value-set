@@ -1,16 +1,16 @@
 # Baasic Value-Set AngularJS SDK
 
-Baasic AngularJS Value-Set library provides access to value-set resource Baasic Service [REST API](https://api.baasic.com).
+Baasic AngularJS Value-Set library provides access to value-set resource Baasic Service [REST API](https://api.baasic.com/vX).
 
 ## Dependencies
 
 Baasic AngularJS Value-Set library has the following dependencies:
 
-* [Baasic Core AngularJS SDK](https://github.com/Baasic/baasic-sdk-sdk-angularjs-core)
+* [Baasic Core AngularJS SDK](../../../baasic-sdk-angularjs-core)
 
 ## Usage
 
-This section will describe how to add the Baasic AngularJS Value-Set library to your project. If you prefer learning by example please skip to [Demo Section](#demo).
+This section will describe how to add the Baasic AngularJS Value-Set library to your project.
 
 ### Adding the Library to your Project
 
@@ -26,7 +26,7 @@ The recommended way of serving the library is through a [CDN](http://en.wikipedi
 
 ### Initialization
 
-To be able to use the library you will need to add the Baasic (_baasic.valueSet_) dependency to your AngularJS module. This will allow you to use library services described in [Modules Section](#baasic-modules).
+To be able to use the library you will need to add the Baasic (_baasic.valueSet_) dependency to your AngularJS module.
 
 ```javascript
 angular.module('my-module', ["baasic.api", "baasic.valueSet"])
@@ -42,8 +42,8 @@ angular.module('my-module', ["baasic.api", "baasic.valueSet"])
 
 ## Contributing
 
-* [Pull requests are always welcome](https://github.com/Baasic/baasic-sdk-sdk-angularjs-core#pull-requests-are-always-welcome)
-* Please [report](https://github.com/Baasic/baasic-sdk-sdk-angularjs-core#issue-reporting) any issues you might  have found
+* [Pull requests are always welcome](../../../baasic-sdk-angularjs-value-set/pulls)
+* Please [report](../../../baasic-sdk-angularjs-value-set/issues) any issues you might have found
 * Help us write the documentation
 * Create interesting apps using SDK
 * Looking for something else to do? Get in touch..
