@@ -20,7 +20,7 @@ baasicValueSetService.find({
   pageSize : 10,
   orderBy : "name",
   orderDirection : "desc",
-  search : "searchTerm"
+  search : "<search-phrase>"
 })
 .success(function (collection) {
   // perform success action here
@@ -36,7 +36,7 @@ baasicValueSetService.find({
                  * Returns a promise that is resolved once the get action has been performed. Success response returns the value set resource.
                  * @method        
                  * @example 
-baasicValueSetService.get("valueSetName")
+baasicValueSetService.get("<value-set-name>")
 .success(function (data) {
   // perform success action here
 })
@@ -52,9 +52,9 @@ baasicValueSetService.get("valueSetName")
                  * @method        
                  * @example 
 baasicValueSetService.create({
-   name: "valueSetName",
-   description: "description",
-   values: [{value: "value"}]
+   name: "<value-set-name>",
+   description: "<description>",
+   values: [{value: "<value>"}]
 })
 .success(function (data) {
   // perform success action here
@@ -71,7 +71,7 @@ baasicValueSetService.create({
                  * @method        
                  * @example 
 // Existing resource is a resource previously fetched using get action.
-existingResource.name = "updated name";
+existingResource.name = "<new-name>";
 baasicValueSetService.update(existingResource)
 .success(function (data) {
   // perform success action here
@@ -107,12 +107,12 @@ baasicValueSetService.remove(existingResource)
                     * @method items.find       
                     * @example 
 baasicValueSetService.items.find({
-  setName: "valueSetName",
+  setName: "<value-set-name>",
   pageNumber : 1,
   pageSize : 10,
   orderBy : "value",
   orderDirection : "desc",
-  search : "searchTerm"
+  search : "<search-phrase>"
 })
 .success(function (collection) {
   // perform success action here
@@ -128,7 +128,7 @@ baasicValueSetService.items.find({
                     * Returns a promise that is resolved once the get action has been performed. Success response returns the value set resource.
                     * @method items.get       
                     * @example 
-baasicValueSetService.items.get("valueSetName", "valueSetItemId")
+baasicValueSetService.items.get("<value-set-name>", "<set-item-id>")
 .success(function (data) {
   // perform success action here
 })
@@ -146,8 +146,8 @@ baasicValueSetService.items.get("valueSetName", "valueSetItemId")
                     * @method items.create       
                     * @example 
 baasicValueSetService.items.create({
-   setId: "uniqueID",
-   value: "value"
+   setId: "<value-set-id>",
+   value: "<value>"
 })
 .success(function (data) {
   // perform success action here
@@ -164,7 +164,7 @@ baasicValueSetService.items.create({
                     * @method items.update       
                     * @example 
 // Existing resource is a resource previously fetched using get action.
-existingResource.value = "updated value";
+existingResource.value = "<new-value>";
 baasicValueSetService.items.update(existingResource)
 .success(function (data) {
   // perform success action here
