@@ -1,9 +1,9 @@
 ﻿/**
  * @module baasicValueSetRouteService
  * @description Baasic Value-Set Route Service provides Baasic route templates which can then be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `baasicValueSetRouteService` to obtain a part of needed routes while the other part is obtained through HAL. Route services by convention use the same function names as their corresponding services. 
- * @copyright (c) 2015 Mono-Software
+ * @copyright (c) 2015 Mono
  * @license MIT
- * @author Mono-Software
+ * @author Mono
 */
 (function (angular, module, undefined) {
     "use strict";
@@ -55,7 +55,7 @@
 					/**
 					* Parses get route which must be expanded with the following items:
 					* - `setName` - Value set name.
-					* - `id˙ - Value set item id.
+					* - `id` - Value set item id.
 					* @method        
 					* @example baasicValueSetRouteService.get.expand({setName: "<value-set-name>", id: "<value-set-item-id>"});               
 					**/					
