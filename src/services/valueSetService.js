@@ -1,9 +1,6 @@
 ﻿/**
  * @module baasicValueSetService
- * @description Baasic Value-Set Service provides an easy way to consume Baasic Value-Set REST routes.
- * @copyright (c) 2015 Mono
- * @license MIT
- * @author Mono
+ * @description Baasic Value-Set Service provides an easy way to consume Baasic Value-Set REST routes. In order to obtain a needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
 */
 (function (angular, module, undefined) {
     "use strict";
@@ -219,3 +216,12 @@ baasicValueSetService.items.remove(valueSetItem)
             };
         }]);
 }(angular, module));
+/**
+ * @copyright (c) 2015 Mono
+ * @license MIT
+ * @author Mono
+ * @overview 
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/
