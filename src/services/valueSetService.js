@@ -72,7 +72,7 @@ baasicValueSetService.create({
                     return baasicApiHttp.post(valueSetRouteService.create.expand({}), baasicApiService.createParams(data)[baasicConstants.modelPropertyName]);
                 },
                  /**
-                 * Returns a promise that is resolved once the update value set action has been performed, this action updates a value set resource. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `update` route can be obtained from value set resource (HAL enabled) objects like this:
+                 * Returns a promise that is resolved once the update value set action has been performed, this action updates a value set resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `baasicValueSetService` route template, here is an example of how a route can be obtained from HAL enabled objects:
 ```
 var params = baasicApiService.removeParams(valueSet);
 var uri = params['model'].links('put').href;
@@ -94,7 +94,7 @@ baasicValueSetService.update(valueSet)
                     return baasicApiHttp.put(params[baasicConstants.modelPropertyName].links('put').href, params[baasicConstants.modelPropertyName]);
                 },
                  /**
-                 * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set resource if the action is completed successfully. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `remove` route can be obtained from value set resource (HAL enabled) objects like this:
+                 * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set resource if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `baasicValueSetService` route template, here is an example of how a route can be obtained from HAL enabled objects:
 ```
 var params = baasicApiService.removeParams(valueSet);
 var uri = params['model'].links('delete').href;
@@ -173,7 +173,7 @@ baasicValueSetService.items.create({
                         return baasicApiHttp.post(valueSetRouteService.items.create.expand(data), baasicApiService.createParams(data)[baasicConstants.modelPropertyName]);
                     },
                     /**
-                    * Returns a promise that is resolved once the update value set item action has been performed, this action updates a value set item resource. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `update` route can be obtained from value set item resource (HAL enabled) objects like this:
+                    * Returns a promise that is resolved once the update value set item action has been performed, this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `baasicValueSetService` route template, here is an example of how a route can be obtained from HAL enabled objects:
 ```
 var params = baasicApiService.removeParams(valueSetItem);
 var uri = params['model'].links('put').href;
@@ -195,7 +195,7 @@ baasicValueSetService.items.update(valueSetItem)
                         return baasicApiHttp.put(params[baasicConstants.modelPropertyName].links('put').href, params[baasicConstants.modelPropertyName]);
                     },
                     /**
-                    * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set item if the action is completed successfully. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `remove` route can be obtained from value set item resource (HAL enabled) objects like this:
+                    * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set item if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `baasicValueSetService` route template, here is an example of how a route can be obtained from HAL enabled objects:
 ```
 var params = baasicApiService.removeParams(valueSetItem);
 var uri = params['model'].links('delete').href;
