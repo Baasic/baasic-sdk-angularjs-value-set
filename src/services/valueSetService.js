@@ -24,7 +24,7 @@ baasicValueSetService.find({
   pageNumber : 1,
   pageSize : 10,
   orderBy : "<name>",
-  orderDirection : "<desc>",
+  orderDirection : "<asc|desc>",
   search : "<search-phrase>"
 })
 .success(function (collection) {
@@ -74,14 +74,14 @@ baasicValueSetService.create({
                  /**
                  * Returns a promise that is resolved once the update value set action has been performed, this action updates a value set resource. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `update` route can be obtained from value set resource (HAL enabled) objects like this:
 ```
-var params = baasicApiService.removeParams(valueSetObject);
+var params = baasicApiService.removeParams(valueSet);
 var uri = params["model"].links('put').href;
 ```
                  * @method        
                  * @example 
 // Existing resource is a resource previously fetched using get action.
-existingResource.name = "<new-name>";
-baasicValueSetService.update(existingResource)
+valueSet.name = "<new-name>";
+baasicValueSetService.update(valueSet)
 .success(function (data) {
   // perform success action here
 })
@@ -96,13 +96,13 @@ baasicValueSetService.update(existingResource)
                  /**
                  * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set resource if the action is completed successfully. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `remove` route can be obtained from value set resource (HAL enabled) objects like this:
 ```
-var params = baasicApiService.removeParams(valueSetObject);
+var params = baasicApiService.removeParams(valueSet);
 var uri = params["model"].links('delete').href;
 ```
                  * @method        
                  * @example 
 // Existing resource is a resource previously fetched using get action.				 
-baasicValueSetService.remove(existingResource)
+baasicValueSetService.remove(valueSet)
 .success(function (data) {
   // perform success action here
 })
@@ -124,7 +124,7 @@ baasicValueSetService.items.find({
   pageNumber : 1,
   pageSize : 10,
   orderBy : "<value>",
-  orderDirection : "<desc>",
+  orderDirection : "<asc|desc>",
   search : "<search-phrase>"
 })
 .success(function (collection) {
@@ -175,14 +175,14 @@ baasicValueSetService.items.create({
                     /**
                     * Returns a promise that is resolved once the update value set item action has been performed, this action updates a value set item resource. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `update` route can be obtained from value set item resource (HAL enabled) objects like this:
 ```
-var params = baasicApiService.removeParams(valueSetItemObject);
+var params = baasicApiService.removeParams(valueSetItem);
 var uri = params["model"].links('put').href;
 ```
                     * @method items.update       
                     * @example 
 // Existing resource is a resource previously fetched using get action.
-existingResource.value = "<new-value>";
-baasicValueSetService.items.update(existingResource)
+valueSetItem.value = "<new-value>";
+baasicValueSetService.items.update(valueSetItem)
 .success(function (data) {
   // perform success action here
 })
@@ -197,13 +197,13 @@ baasicValueSetService.items.update(existingResource)
                     /**
                     * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set item if the action is completed successfully. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `remove` route can be obtained from value set item resource (HAL enabled) objects like this:
 ```
-var params = baasicApiService.removeParams(valueSetItemObject);
+var params = baasicApiService.removeParams(valueSetItem);
 var uri = params["model"].links('delete').href;
 ```
                     * @method items.remove       
                     * @example 
 // Existing resource is a resource previously fetched using get action.				 
-baasicValueSetService.items.remove(existingResource)
+baasicValueSetService.items.remove(valueSetItem)
 .success(function (data) {
   // perform success action here
 })
