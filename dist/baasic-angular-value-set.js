@@ -7,18 +7,18 @@
      * @module baasic.valueSet
      * @example
      (function (Main) {
-     "use strict";
+     'use strict';
      var dependencies = [
-     "baasic.api",
-     "baasic.membership",
-     "baasic.security",
-     "baasic.appSettings",
-     "baasic.article",
-     "baasic.dynamicResource",
-     "baasic.keyValue",
-     "baasic.valueSet"
+     'baasic.api',
+     'baasic.membership',
+     'baasic.security',
+     'baasic.appSettings',
+     'baasic.article',
+     'baasic.dynamicResource',
+     'baasic.keyValue',
+     'baasic.valueSet'
      ];
-     Main.module = angular.module("myApp.Main", dependencies);
+     Main.module = angular.module('myApp.Main', dependencies);
      }
      (MyApp.Modules.Main = {})); 
      */
@@ -28,7 +28,7 @@
 
     /**
      * @module baasicValueSetRouteService
-     * @description Baasic Value-Set Route Service provides Baasic route templates which can then be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `baasicValueSetRouteService` to obtain a part of needed routes while the other part is obtained through HAL. Route services by convention use the same function names as their corresponding services. 
+     * @description Baasic Value-Set Route Service provides Baasic route templates which can be expanded to Baasic REST URI's through the [URI Template](https://github.com/Baasic/uritemplate-js) by providing it with an object that contains URI parameters. `valueSetService` uses `baasicValueSetRouteService` to obtain a part of needed routes while the other part is obtained through HAL. Route services by convention use the same function names as their corresponding services. 
      * @copyright (c) 2015 Mono
      * @license MIT
      * @author Mono
@@ -45,13 +45,13 @@
                  * - `sort` - A string used to set the role property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
-                 * @example baasicValueSetRouteService.find.expand({searchQuery: "<search-phrase>"});               
+                 * @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
                  **/
                 find: uriTemplateService.parse("value-sets/{?searchQuery,page,rpp,sort,embed,fields}"),
                 /**
                  * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
                  * @method        
-                 * @example baasicValueSetRouteService.get.expand({setName: "<value-set-name>"});               
+                 * @example baasicValueSetRouteService.get.expand({setName: '<value-set-name>'});               
                  **/
                 get: uriTemplateService.parse("value-sets/{setName}/{?embed,fields}"),
                 /**
@@ -63,7 +63,7 @@
                 /**
                  * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                  * @method
-                 * @example baasicValueSetRouteService.parse("route/{?embed,fields,options}").expand({embed: "<embedded-resource>"});
+                 * @example baasicValueSetRouteService.parse('route/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
                  **/
                 parse: uriTemplateService.parse,
                 items: {
@@ -76,7 +76,7 @@
                      * - `sort` - A string used to set the role property to sort the result collection by.
                      * - `embed` - Comma separated list of resources to be contained within the current representation.
                      * @method items.find       
-                     * @example baasicValueSetRouteService.find.expand({searchQuery: "<search-phrase>"});               
+                     * @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
                      **/
                     find: uriTemplateService.parse("value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}"),
                     /**
@@ -84,7 +84,7 @@
                      * - `setName` - Value set name.
                      * - `id` - Value set item id.
                      * @method        
-                     * @example baasicValueSetRouteService.get.expand({setName: "<value-set-name>", id: "<value-set-item-id>"});               
+                     * @example baasicValueSetRouteService.get.expand({setName: '<value-set-name>', id: '<value-set-item-id>'});               
                      **/
                     get: uriTemplateService.parse("value-sets/{setName}/items/{id}/{?embed,fields}"),
                     /**
@@ -96,7 +96,7 @@
                     /**
                      * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                      * @method
-                     * @example baasicValueSetRouteService.parse("route/{?embed,fields,options}").expand({embed: "<embedded-resource>"});
+                     * @example baasicValueSetRouteService.parse('route/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
                      **/
                     parse: uriTemplateService.parse
                 }
@@ -127,9 +127,9 @@
                  baasicValueSetService.find({
                  pageNumber : 1,
                  pageSize : 10,
-                 orderBy : "<name>",
-                 orderDirection : "<desc>",
-                 search : "<search-phrase>"
+                 orderBy : '<name>',
+                 orderDirection : '<asc|desc>',
+                 search : '<search-phrase>'
                  })
                  .success(function (collection) {
                  // perform success action here
@@ -145,7 +145,7 @@
                  * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set resource.
                  * @method        
                  * @example 
-                 baasicValueSetService.get("<value-set-name>")
+                 baasicValueSetService.get('<value-set-name>')
                  .success(function (data) {
                  // perform success action here
                  })
@@ -161,9 +161,9 @@
                  * @method        
                  * @example 
                  baasicValueSetService.create({
-                 name: "<value-set-name>",
-                 description: "<description>",
-                 values: [{value: "<value>"}]
+                 name: '<value-set-name>',
+                 description: '<description>',
+                 values: [{value: '<value>'}]
                  })
                  .success(function (data) {
                  // perform success action here
@@ -178,14 +178,14 @@
                 /**
                  * Returns a promise that is resolved once the update value set action has been performed, this action updates a value set resource. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `update` route can be obtained from value set resource (HAL enabled) objects like this:
                  ```
-                 var params = baasicApiService.removeParams(valueSetObject);
-                 var uri = params["model"].links('put').href;
+                 var params = baasicApiService.removeParams(valueSet);
+                 var uri = params['model'].links('put').href;
                  ```
                  * @method        
                  * @example 
                  // Existing resource is a resource previously fetched using get action.
-                 existingResource.name = "<new-name>";
-                 baasicValueSetService.update(existingResource)
+                 valueSet.name = '<new-name>';
+                 baasicValueSetService.update(valueSet)
                  .success(function (data) {
                  // perform success action here
                  })
@@ -200,13 +200,13 @@
                 /**
                  * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set resource if the action is completed successfully. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `remove` route can be obtained from value set resource (HAL enabled) objects like this:
                  ```
-                 var params = baasicApiService.removeParams(valueSetObject);
-                 var uri = params["model"].links('delete').href;
+                 var params = baasicApiService.removeParams(valueSet);
+                 var uri = params['model'].links('delete').href;
                  ```
                  * @method        
                  * @example 
                  // Existing resource is a resource previously fetched using get action.
-                 baasicValueSetService.remove(existingResource)
+                 baasicValueSetService.remove(valueSet)
                  .success(function (data) {
                  // perform success action here
                  })
@@ -224,12 +224,12 @@
                      * @method items.find       
                      * @example 
                      baasicValueSetService.items.find({
-                     setName: "<value-set-name>",
+                     setName: '<value-set-name>',
                      pageNumber : 1,
                      pageSize : 10,
-                     orderBy : "<value>",
-                     orderDirection : "<desc>",
-                     search : "<search-phrase>"
+                     orderBy : '<value>',
+                     orderDirection : '<asc|desc>',
+                     search : '<search-phrase>'
                      })
                      .success(function (collection) {
                      // perform success action here
@@ -245,7 +245,7 @@
                      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value item set resource.
                      * @method items.get       
                      * @example 
-                     baasicValueSetService.items.get("<value-set-name>", "<set-item-id>")
+                     baasicValueSetService.items.get('<value-set-name>', '<set-item-id>')
                      .success(function (data) {
                      // perform success action here
                      })
@@ -263,8 +263,8 @@
                      * @method items.create       
                      * @example 
                      baasicValueSetService.items.create({
-                     setId: "<value-set-id>",
-                     value: "<value>"
+                     setId: '<value-set-id>',
+                     value: '<value>'
                      })
                      .success(function (data) {
                      // perform success action here
@@ -279,14 +279,14 @@
                     /**
                      * Returns a promise that is resolved once the update value set item action has been performed, this action updates a value set item resource. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `update` route can be obtained from value set item resource (HAL enabled) objects like this:
                      ```
-                     var params = baasicApiService.removeParams(valueSetItemObject);
-                     var uri = params["model"].links('put').href;
+                     var params = baasicApiService.removeParams(valueSetItem);
+                     var uri = params['model'].links('put').href;
                      ```
                      * @method items.update       
                      * @example 
                      // Existing resource is a resource previously fetched using get action.
-                     existingResource.value = "<new-value>";
-                     baasicValueSetService.items.update(existingResource)
+                     valueSetItem.value = '<new-value>';
+                     baasicValueSetService.items.update(valueSetItem)
                      .success(function (data) {
                      // perform success action here
                      })
@@ -301,13 +301,13 @@
                     /**
                      * Returns a promise that is resolved once the remove action has been performed. This action deletes a value set item if the action is completed successfully. This function doesn't use `baasicValueSetRouteService` for obtaining route templates, however `remove` route can be obtained from value set item resource (HAL enabled) objects like this:
                      ```
-                     var params = baasicApiService.removeParams(valueSetItemObject);
-                     var uri = params["model"].links('delete').href;
+                     var params = baasicApiService.removeParams(valueSetItem);
+                     var uri = params['model'].links('delete').href;
                      ```
                      * @method items.remove       
                      * @example 
                      // Existing resource is a resource previously fetched using get action.
-                     baasicValueSetService.items.remove(existingResource)
+                     baasicValueSetService.items.remove(valueSetItem)
                      .success(function (data) {
                      // perform success action here
                      })
