@@ -17,7 +17,7 @@ This section will describe how to add the Baasic AngularJS Value-Set library to 
 Please add the _Baasic Value-Set_ include after the _Baasic Angular Core_ include:
 
 ```html
-<script src='/js/baasic-angular-1.0.0.min.js'></script>
+<script src='/js/baasic-angular-core-1.0.0.min.js'></script>
 <script src='/js/baasic-angular-value-set-1.0.0.min.js'></script>
 ```
 

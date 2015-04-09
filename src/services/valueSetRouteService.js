@@ -9,10 +9,10 @@
             return {		
                 /**
                 * Parses find value set route which can be expanded with additional options. Supported items are: 
-                * - `searchQuery` - A string referencing resource properties using the phrase or query search.
-                * - `page` - A value used to set the page offset, i.e. to retrieve certain resource subset from the storage.
+                * - `searchQuery` - A string value used to identify value set resources using the phrase search.
+                * - `page` - A value used to set the page number, i.e. to retrieve certain value set subset from the storage.
                 * - `rpp` - A value used to limit the size of result set per page.
-                * - `sort` - A string used to set the role property to sort the result collection by.
+                * - `sort` - A string used to set the value set property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
                 * @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -40,10 +40,10 @@
 					/**
 					* Parses find value set items route which can be expanded with additional options. Supported items are:
 					* - `setName` - Value set name.
-					* - `searchQuery` - A string referencing resource properties using the phrase or query search.
-					* - `page` - A value used to set the page offset, i.e. to retrieve certain resource subset from the storage.
+					* - `searchQuery` - A string value used to identify value set items using the phrase search.
+					* - `page` - A value used to set the page number, i.e. to retrieve certain value set item subset from the storage.
 					* - `rpp` - A value used to limit the size of result set per page.
-					* - `sort` - A string used to set the role property to sort the result collection by.
+					* - `sort` - A string used to set the value set item property to sort the result collection by.
 					* - `embed` - Comma separated list of resources to be contained within the current representation.
 					* @method items.find       
 					* @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
@@ -54,7 +54,11 @@
 					* - `setName` - Value set name.
 					* - `id` - Value set item id.
 					* @method        
-					* @example baasicValueSetRouteService.get.expand({setName: '<value-set-name>', id: '<value-set-item-id>'});               
+					* @example 
+baasicValueSetRouteService.get.expand({
+    setName: '<value-set-name>', 
+    id: '<value-set-item-id>'
+});               
 					**/					
                     get: uriTemplateService.parse("value-sets/{setName}/items/{id}/{?embed,fields}"),
 					/**

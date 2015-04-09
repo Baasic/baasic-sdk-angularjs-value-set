@@ -1,18 +1,12 @@
 ﻿/**
  * @module baasicValueSetService
- * @description Baasic Value-Set Service provides an easy way to consume Baasic Value-Set REST routes. In order to obtain a needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
+ * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain a needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
 */
 (function (angular, module, undefined) {
     "use strict";
     module.service("baasicValueSetService", ["baasicApiHttp", "baasicApiService", "baasicConstants", "baasicValueSetRouteService",
         function (baasicApiHttp, baasicApiService, baasicConstants, valueSetRouteService) {
             return {
-                /**
-                * Provides direct access to `baasicValueSetRouteService`.
-                * @method        
-                * @example baasicValueSetService.routeService.get.expand(expandObject);
-                **/              
-                routeService: valueSetRouteService,
                  /**
                  * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
                  * @method        
@@ -20,7 +14,7 @@
 baasicValueSetService.find({
   pageNumber : 1,
   pageSize : 10,
-  orderBy : '<name>',
+  orderBy : '<field>',
   orderDirection : '<asc|desc>',
   search : '<search-phrase>'
 })
@@ -111,6 +105,12 @@ baasicValueSetService.remove(valueSet)
                     var params = baasicApiService.removeParams(data);
                     return baasicApiHttp.delete(params[baasicConstants.modelPropertyName].links('delete').href);
                 },
+                /**
+                * Provides direct access to `baasicValueSetRouteService`.
+                * @method        
+                * @example baasicValueSetService.routeService.get.expand(expandObject);
+                **/              
+                routeService: valueSetRouteService,
                 items: {
                     /**
                     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
@@ -120,7 +120,7 @@ baasicValueSetService.items.find({
   setName: '<value-set-name>',
   pageNumber : 1,
   pageSize : 10,
-  orderBy : '<value>',
+  orderBy : '<field>',
   orderDirection : '<asc|desc>',
   search : '<search-phrase>'
 })
