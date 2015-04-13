@@ -113,7 +113,7 @@ baasicValueSetService.remove(valueSet)
                 routeService: valueSetRouteService,
                 items: {
                     /**
-                    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
+                    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
                     * @method items.find       
                     * @example 
 baasicValueSetService.items.find({

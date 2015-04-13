@@ -15,13 +15,19 @@
                 * - `sort` - A string used to set the value set property to sort the result collection by.
 				* - `embed` - Comma separated list of resources to be contained within the current representation.
                 * @method        
-                * @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
+                * @example 
+baasicValueSetRouteService.find.expand(
+	{searchQuery: '<search-phrase>'}
+);               
                 **/ 			
                 find: uriTemplateService.parse("value-sets/{?searchQuery,page,rpp,sort,embed,fields}"),
                 /**
                 * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
                 * @method        
-                * @example baasicValueSetRouteService.get.expand({setName: '<value-set-name>'});               
+                * @example 
+baasicValueSetRouteService.get.expand(
+	{setName: '<value-set-name>'}
+);               
                 **/   				
                 get: uriTemplateService.parse("value-sets/{setName}/{?embed,fields}"),
                 /**
@@ -33,7 +39,12 @@
                 /**
                 * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                 * @method
-                * @example baasicValueSetRouteService.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
+                * @example 
+baasicValueSetRouteService.parse(
+	'<route>/{?embed,fields,options}'
+).expand(
+	{embed: '<embedded-resource>'}
+);
                 **/ 					
                 parse: uriTemplateService.parse,
                 items: {
@@ -46,7 +57,10 @@
 					* - `sort` - A string used to set the value set item property to sort the result collection by.
 					* - `embed` - Comma separated list of resources to be contained within the current representation.
 					* @method items.find       
-					* @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
+					* @example 
+baasicValueSetRouteService.find.expand(
+	{searchQuery: '<search-phrase>'}
+);               
 					**/ 				
                     find: uriTemplateService.parse("value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}"),
 					/**
@@ -70,7 +84,12 @@ baasicValueSetRouteService.get.expand({
 					/**
 					* Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
 					* @method
-					* @example baasicValueSetRouteService.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
+					* @example 
+baasicValueSetRouteService.parse(
+	'<route>/{?embed,fields,options}'
+).expand(
+	{embed: '<embedded-resource>'}
+);
 					**/ 						
                     parse: uriTemplateService.parse
                 }
