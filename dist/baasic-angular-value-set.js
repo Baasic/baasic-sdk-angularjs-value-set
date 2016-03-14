@@ -25,7 +25,7 @@
 
     /**
      * @module baasicValueSetRouteService
-     * @description Baasic Value Set Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+     * @description Baasic Value Set Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         "use strict";
@@ -130,7 +130,7 @@
 
     /**
      * @module baasicValueSetService
-     * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain a needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
+     * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
      */
     (function (angular, module, undefined) {
         "use strict";
