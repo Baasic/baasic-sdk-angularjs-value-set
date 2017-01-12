@@ -1,3 +1,8 @@
+/*
+ Baasic AngularJS Value Set v1.0.0
+ (c) 2014-2017 Mono http://baasic.com
+ License: MIT
+*/
 (function (angular, undefined) {
     /** 
      * @overview The angular.module is a global place for creating, registering or retrieving modules. All modules should be registered in an application using this mechanism. An angular module is a container for the different parts of your app - services, directives etc. In order to use `baasic.valueSet` module functionality it must be added as a dependency to your app.
@@ -28,7 +33,7 @@
 
     /**
      * @module baasicValueSetRouteService
-     * @description Baasic Value Set Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+     * @description Baasic Value Set Route Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
      */
     (function (angular, module, undefined) {
         "use strict";
@@ -42,13 +47,19 @@
                  * - `sort` - A string used to set the value set property to sort the result collection by.
                  * - `embed` - Comma separated list of resources to be contained within the current representation.
                  * @method        
-                 * @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
+                 * @example 
+                 baasicValueSetRouteService.find.expand(
+                 {searchQuery: '<search-phrase>'}
+                 );
                  **/
                 find: uriTemplateService.parse("value-sets/{?searchQuery,page,rpp,sort,embed,fields}"),
                 /**
                  * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
                  * @method        
-                 * @example baasicValueSetRouteService.get.expand({setName: '<value-set-name>'});               
+                 * @example 
+                 baasicValueSetRouteService.get.expand(
+                 {setName: '<value-set-name>'}
+                 );
                  **/
                 get: uriTemplateService.parse("value-sets/{setName}/{?embed,fields}"),
                 /**
@@ -60,7 +71,12 @@
                 /**
                  * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                  * @method
-                 * @example baasicValueSetRouteService.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
+                 * @example 
+                 baasicValueSetRouteService.parse(
+                 '<route>/{?embed,fields,options}'
+                 ).expand(
+                 {embed: '<embedded-resource>'}
+                 );
                  **/
                 parse: uriTemplateService.parse,
                 items: {
@@ -73,7 +89,10 @@
                      * - `sort` - A string used to set the value set item property to sort the result collection by.
                      * - `embed` - Comma separated list of resources to be contained within the current representation.
                      * @method items.find       
-                     * @example baasicValueSetRouteService.find.expand({searchQuery: '<search-phrase>'});               
+                     * @example 
+                     baasicValueSetRouteService.find.expand(
+                     {searchQuery: '<search-phrase>'}
+                     );
                      **/
                     find: uriTemplateService.parse("value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}"),
                     /**
@@ -97,7 +116,12 @@
                     /**
                      * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
                      * @method
-                     * @example baasicValueSetRouteService.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
+                     * @example 
+                     baasicValueSetRouteService.parse(
+                     '<route>/{?embed,fields,options}'
+                     ).expand(
+                     {embed: '<embedded-resource>'}
+                     );
                      **/
                     parse: uriTemplateService.parse
                 }
@@ -117,7 +141,7 @@
 
     /**
      * @module baasicValueSetService
-     * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain a needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
+     * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
      */
     (function (angular, module, undefined) {
         "use strict";
@@ -229,7 +253,7 @@
                 routeService: valueSetRouteService,
                 items: {
                     /**
-                     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
+                     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
                      * @method items.find       
                      * @example 
                      baasicValueSetService.items.find({

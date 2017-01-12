@@ -1,6 +1,6 @@
 ﻿/**
  * @module baasicValueSetService
- * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain a needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
+ * @description Baasic Value Set Service provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
 */
 (function (angular, module, undefined) {
     "use strict";
@@ -113,7 +113,7 @@ baasicValueSetService.remove(valueSet)
                 routeService: valueSetRouteService,
                 items: {
                     /**
-                    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
+                    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
                     * @method items.find       
                     * @example 
 baasicValueSetService.items.find({
