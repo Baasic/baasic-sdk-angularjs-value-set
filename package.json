@@ -1,6 +1,6 @@
 {
   "name": "baasic-angularjs-value-set",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "devDependencies": {
     "baasic-javascript-docgen": "git://github.com/Baasic/baasic-javascript-docgen",
     "gulp": ">3.4.0",

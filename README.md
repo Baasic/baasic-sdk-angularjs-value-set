@@ -1,6 +1,6 @@
 # Baasic Value-Set AngularJS SDK
 
-Baasic AngularJS Value-Set library provides access to [Baasic REST API](https://api.baasic.com/beta) value set end-points.
+Baasic AngularJS Value-Set library provides access to [Baasic REST API](http://dev.baasic.com/api/reference/home) value set end-points.
 
 ## Dependencies
 
